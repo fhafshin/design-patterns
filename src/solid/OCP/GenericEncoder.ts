@@ -1,16 +1,14 @@
+import EncoderFactory from "./EncoderFactory";
+import IEncoder from "./IEncoder";
+import IEncoderFactory from "./IEncoderFactory";
 import JsonEncoder from "./JsonEncoder";
 import XmlEncoder from "./XmlEncoder";
 
 export default class GenericEncoder {
-  public encode(data: any, format: string) {
-    let encoder;
+  constructor(private encoderFactory: IEncoderFactory) {}
+  public encode(data: any, format: string): string {
+    const encoder: IEncoder = this.encoderFactory.createEncoder(format);
 
-    if (format === "json") {
-      encoder = new JsonEncoder();
-    } else if (format === "xml") {
-      encoder = new XmlEncoder();
-    } else {
-      throw new Error("not found....");
-    }
+    return encoder.encode(data);
   }
 }

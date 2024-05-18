@@ -1,1 +1,3 @@
-export default interface IEncoder {}
+export default interface IEncoder {
+  encode(data: any): string;
+}
