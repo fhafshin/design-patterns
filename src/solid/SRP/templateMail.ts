@@ -1,6 +1,6 @@
-import ITempleteMail from "./ITempleteMail";
+import ITemplateMail from "./ITemplateMail";
 
-export default class templeteMail implements ITempleteMail {
+export default class templateMail implements ITemplateMail {
   text: string;
 
   constructor(value: string) {
