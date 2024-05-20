@@ -2,8 +2,8 @@ import ITemplateMail from "./ITemplateMail";
 import ITranslateMail from "./ITranslateMail";
 
 export default interface IFactoryMail {
-  ITranslateMail: ITranslateMail;
-  ITemplateMail: ITemplateMail;
+  iTranslateMail: ITranslateMail;
+  iTemplateMail: ITemplateMail;
 
   getMessage(): string;
 }
