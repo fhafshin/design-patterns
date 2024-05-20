@@ -1,12 +1,11 @@
 import IEncoder from "./IEncoder";
 import IEncoderFactory from "./IEncoderFactory";
 import IEncoderFactoryConfig from "./IEncoderFactoryConfig";
-import JsonEncoder from "./JsonEncoder";
-import XmlEncoder from "./XmlEncoder";
 
 export default class EncoderFactory
   implements IEncoderFactory, IEncoderFactoryConfig
 {
+  constructor();
   private encoders: Map<string, IEncoder> = new Map<string, IEncoder>();
 
   public addEncoder(format: string, encoder: IEncoder) {
