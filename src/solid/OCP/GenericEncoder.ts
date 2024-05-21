@@ -1,9 +1,8 @@
-import EncoderFactory from "./EncoderFactory";
 import IEncoder from "./IEncoder";
-import IGenericEncoder from "./IGenericEncoder";
+import IEncoderFactory from "./IEncoderFactory";
 
-export default class GenericEncoder implements IGenericEncoder {
-  constructor(private encoderFactory: EncoderFactory) {}
+export default class GenericEncoder {
+  constructor(private encoderFactory: IEncoderFactory) {}
 
   public encode(data: any, format: string): string {
     const encoder: IEncoder = this.encoderFactory.createEncoder(format);

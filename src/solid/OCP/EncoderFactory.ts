@@ -5,7 +5,6 @@ import IEncoderFactoryConfig from "./IEncoderFactoryConfig";
 export default class EncoderFactory
   implements IEncoderFactory, IEncoderFactoryConfig
 {
-  constructor();
   private encoders: Map<string, IEncoder> = new Map<string, IEncoder>();
 
   public addEncoder(format: string, encoder: IEncoder) {

@@ -5,7 +5,7 @@ import IEncoderFactoryConfig from "./IEncoderFactoryConfig";
 import JsonEncoder from "./JsonEncoder";
 import XmlEncoder from "./XmlEncoder";
 
-export default class main {
+export default class Main {
   constructor() {
     const encoderFactoryConfig: IEncoderFactoryConfig = new EncoderFactory();
 
@@ -15,8 +15,10 @@ export default class main {
     encoderFactoryConfig.addEncoder("json", jsonEncoder);
     encoderFactoryConfig.addEncoder("xml", xmlEncoder);
 
-    const encoderFactory = new EncoderFactory();
+    const genericEncoder = new GenericEncoder(
+      encoderFactoryConfig as EncoderFactory
+    );
 
-    const genericEncoder = new GenericEncoder(encoderFactory);
+    console.log(genericEncoder.encode("kkkk", "xml"));
   }
 }
