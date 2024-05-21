@@ -1,4 +1,4 @@
-import Message from "./Message";
+import Message from "../Message";
 import MessagePublisher from "./MessagePublisher";
 
 export default class SocialService {

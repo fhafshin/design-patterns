@@ -1,4 +1,4 @@
-import MessagePublisher from "../Publisher/MessagePublisher";
+import MessagePublisher from "../MessagePublisher";
 import Publisher from "../Publisher/Publisher";
 import TwitterPublisher from "./TwitterPublisher";
 
