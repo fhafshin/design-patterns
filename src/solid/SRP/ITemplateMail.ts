@@ -1,4 +1,4 @@
-export default interface ITempleteMail {
+export default interface ITemplateMail {
   text: string;
 
   createTemplate(): string;

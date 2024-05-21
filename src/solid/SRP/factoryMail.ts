@@ -1,21 +1,21 @@
 import IFactoryMail from "./IFactoryMail";
-import ITempleteMail from "./ITempleteMail";
-import ITranslateMail from "./ITransateMail";
+import ITemplateMail from "./ITemplateMail";
+import ITranslateMail from "./ITranslateMail";
 
-export default class factoryMail implements IFactoryMail {
-  ITranslateMail: ITranslateMail;
-  ITempleteMail: ITempleteMail;
+export default class FactoryMail implements IFactoryMail {
+  iTranslateMail: ITranslateMail;
+  iTemplateMail: ITemplateMail;
 
-  constructor(ITranslateMail: ITranslateMail, ITempleteMail: ITempleteMail) {
-    this.ITempleteMail = ITempleteMail;
-    this.ITranslateMail = ITranslateMail;
+  constructor(iTranslateMail: ITranslateMail, iTemplateMail: ITemplateMail) {
+    this.iTranslateMail = iTranslateMail;
+    this.iTemplateMail = iTemplateMail;
   }
 
   getMessage(): string {
     return (
-      this.ITempleteMail.createTemplate() +
+      this.iTemplateMail.createTemplate() +
       " " +
-      this.ITranslateMail.translator()
+      this.iTranslateMail.translator()
     );
   }
 }

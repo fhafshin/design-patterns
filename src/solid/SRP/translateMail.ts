@@ -1,6 +1,6 @@
-import ITranslateMail from "./ITransateMail";
+import ITranslateMail from "./ITranslateMail";
 
-export default class translateMail implements ITranslateMail {
+export default class TranslateMail implements ITranslateMail {
   text: string;
 
   constructor(value: string) {

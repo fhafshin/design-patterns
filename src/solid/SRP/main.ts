@@ -1,14 +1,15 @@
 import confirmMail from "./confirmMail";
-import factoryMail from "./factoryMail";
-import templeteMail from "./templeteMail";
-import translateMail from "./translateMail";
+import FactoryMail from "./factoryMail";
+import TemplateMail from "./templateMail";
+import TranslateMail from "./translateMail";
 
 export default class main {
   public sendMail() {
-    const TranslateMail = new translateMail("sample");
-    const TempleteMail = new templeteMail("sample");
+    const translateMail = new TranslateMail("sample");
+    const templateMail = new TemplateMail("sample");
 
-    const FactoryMail = new factoryMail(TranslateMail, TempleteMail);
-    const mail = new confirmMail(FactoryMail);
+    const factoryMail = new FactoryMail(translateMail, templateMail);
+
+    const mail = new confirmMail(factoryMail);
   }
 }

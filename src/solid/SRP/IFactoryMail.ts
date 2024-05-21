@@ -1,9 +1,9 @@
-import ITempleteMail from "./ITempleteMail";
-import ITranslateMail from "./ITransateMail";
+import ITemplateMail from "./ITemplateMail";
+import ITranslateMail from "./ITranslateMail";
 
 export default interface IFactoryMail {
-  ITranslateMail: ITranslateMail;
-  ITempleteMail: ITempleteMail;
+  iTranslateMail: ITranslateMail;
+  iTemplateMail: ITemplateMail;
 
   getMessage(): string;
 }
