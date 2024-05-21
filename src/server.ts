@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 import application from "./app";
-import SocialService from "./FactoryMethod/example1/Publisher/SocialService";
 import TwitterMessagePublisher from "./FactoryMethod/example1/MessagePublisher/TwitterMessagePublisher";
+import SocialService from "./FactoryMethod/example1/SocialService";
 
 dotenv.config();
 
