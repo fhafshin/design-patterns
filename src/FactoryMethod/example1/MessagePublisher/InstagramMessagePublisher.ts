@@ -1,6 +1,6 @@
 import MessagePublisher from "../MessagePublisher";
-import Publisher from "../Publisher/Publisher";
-import InstagramPublisher from "./InstagramPublisher";
+import Publisher from "../Publisher";
+import InstagramPublisher from "../Publisher/InstagramPublisher";
 
 export default class InstagramMessagePublisher extends MessagePublisher {
   public createPublisher(): Publisher {
