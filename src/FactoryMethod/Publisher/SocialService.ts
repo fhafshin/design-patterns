@@ -10,9 +10,9 @@ export default class SocialService {
 
   public publish(formRequest: any) {
     const message: Message = new Message(
-      formRequest.title,
-      formRequest.content,
-      formRequest.image
+      formRequest.tittle,
+      formRequest.image,
+      formRequest.content
     );
 
     this._publisher.publish(message);
