@@ -6,10 +6,10 @@ import BootstrapTextArea from "./Elements/BootstrapTextArea";
 
 export default class BootstrapUiFactory implements FormUiFactory {
   createTextArea(): TextArea {
-    throw new BootstrapTextArea();
+    return new BootstrapTextArea();
   }
 
   createButton(): Button {
-    throw new BootstrapButton();
+    return new BootstrapButton();
   }
 }
