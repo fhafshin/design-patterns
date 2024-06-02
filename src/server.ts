@@ -15,6 +15,9 @@ import PDFFactory from "./AbstractFactory/DocumentFactory/PDFDocument/PDFFactory
 import WordFactory from "./AbstractFactory/DocumentFactory/WordDucoment/WordFactory";
 import APIService from "./Builder/Request/APIService";
 import OrderBuilder from "./Builder/orderBuilder/OrderBuilder";
+import Composite from "./Composite/Consept/Composite";
+import Leaf from "./Composite/Consept/Leaf";
+import Component from "./Composite/Consept/Component";
 
 dotenv.config();
 
@@ -26,12 +29,11 @@ app.run(Number(process.env.APP_PORT));
 
 const notifier: NotifierCreator = new TelegramNotifierCreator();
 
-const order = OrderBuilder.onOrder().withCustomer("create .....").build();
+const l1 = new Leaf();
+const l2 = new Leaf();
+const l3 = new Leaf();
+const leaf1: Component = new Composite([l1, l2, l3]);
 
-const order2 = OrderBuilder.onOrder(order)
-  .withFinalPrice(20)
-  .withCustomer("jjjjj")
-  .build();
-console.log(order);
+const leaf: Component = new Composite([l1, l2, l3, leaf1]);
 
-console.log(order2);
+leaf.operation();
