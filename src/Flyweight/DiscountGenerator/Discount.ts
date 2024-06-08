@@ -4,6 +4,6 @@ export default class Discount {
   constructor(
     private _code: string,
     private _user: number,
-    private _discountconstraints: DiscountConstraints
+    private _discountConstraints: DiscountConstraints
   ) {}
 }
