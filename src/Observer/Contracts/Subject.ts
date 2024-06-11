@@ -1,7 +1,7 @@
 import Observer from "./Observer";
 
 export default interface subject {
-  attach(observer: Observer): void;
-  detach(observer: Observer): void;
+  attach(name: string, observer: Observer): void;
+  detach(name: string, observer: Observer): void;
   notify(): void;
 }
