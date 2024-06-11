@@ -18,6 +18,7 @@ import OrderBuilder from "./Builder/orderBuilder/OrderBuilder";
 import Composite from "./Composite/Consept/Composite";
 import Leaf from "./Composite/Consept/Leaf";
 import Component from "./Composite/Consept/Component";
+import Client from "./Observer/Product/Client";
 
 dotenv.config();
 
@@ -27,13 +28,16 @@ console.log(process.env.APP_PORT);
 
 app.run(Number(process.env.APP_PORT));
 
-const notifier: NotifierCreator = new TelegramNotifierCreator();
+// const notifier: NotifierCreator = new TelegramNotifierCreator();
 
-const l1 = new Leaf();
-const l2 = new Leaf();
-const l3 = new Leaf();
-const leaf1: Component = new Composite([l1, l2, l3]);
+// const l1 = new Leaf();
+// const l2 = new Leaf();
+// const l3 = new Leaf();
+// const leaf1: Component = new Composite([l1, l2, l3]);
 
-const leaf: Component = new Composite([l1, l2, l3, leaf1]);
+// const leaf: Component = new Composite([l1, l2, l3, leaf1]);
 
-leaf.operation();
+// leaf.operation();
+
+const client = new Client();
+client.updatePrice();
