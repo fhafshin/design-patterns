@@ -1,9 +1,9 @@
 import Post from "./Post";
 
 export default abstract class PostStatus {
-  private _post: Post;
+  private _post?: Post;
 
-  public set Post(post: Post) {
+  public setPost(post: Post) {
     this._post = post;
   }
 

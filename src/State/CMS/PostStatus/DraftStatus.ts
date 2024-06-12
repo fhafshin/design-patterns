@@ -1,13 +1,15 @@
 import PostStatus from "../PostStatus";
+import ModerationStatus from "./ModerationStatus";
+import PublishedStatus from "./PublishedStatus";
 
 export default class DraftStatus extends PostStatus {
   public draft(): void {
-    throw new Error("Method not implemented.");
+    this._post.transitionTo(new DraftStatus());
   }
   public published(): void {
-    throw new Error("Method not implemented.");
+    throw new Error("مطالب باید تایید شود");
   }
   public moderation(): void {
-    throw new Error("Method not implemented.");
+    this._post.transitionTo(new ModerationStatus());
   }
 }
