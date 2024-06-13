@@ -16,4 +16,12 @@ export default class Order {
   public paid(): void {
     this._status.paid();
   }
+
+  public pending(): void {
+    this._status.pending();
+  }
+
+  public deliver() {
+    this._status.delivered();
+  }
 }
