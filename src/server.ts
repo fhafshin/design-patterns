@@ -19,6 +19,7 @@ import Composite from "./Composite/Consept/Composite";
 import Leaf from "./Composite/Consept/Leaf";
 import Component from "./Composite/Consept/Component";
 import Client from "./Observer/Product/Client";
+import Order from "./State/Order/Order";
 
 dotenv.config();
 
@@ -39,5 +40,6 @@ app.run(Number(process.env.APP_PORT));
 
 // leaf.operation();
 
-const client = new Client();
-client.updatePrice();
+const order = new Order();
+
+order.pending();
