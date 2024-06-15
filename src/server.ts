@@ -18,9 +18,10 @@ import OrderBuilder from "./Builder/orderBuilder/OrderBuilder";
 import Composite from "./Composite/Consept/Composite";
 import Leaf from "./Composite/Consept/Leaf";
 import Component from "./Composite/Consept/Component";
-import Client from "./Observer/Product/Client";
 import Order from "./State/Order/Order";
-
+import Client from "./Visitor/FileSystem/Client";
+import File from "./Visitor/FileSystem/File";
+import Directory from "./Visitor/FileSystem/Directory";
 dotenv.config();
 
 const app = new application();
@@ -40,6 +41,6 @@ app.run(Number(process.env.APP_PORT));
 
 // leaf.operation();
 
-const order = new Order();
-
-order.pending();
+const client = new Client();
+client.printFile(new Directory());
+client.printFile(new File());
