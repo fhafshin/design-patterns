@@ -19,11 +19,6 @@ type ReadOnlyPerson = Readonly<TPerson>;
 
 type record = Record<number, TPerson>;
 
-function Logger(constructor: Function) {
-  console.log("Logging..." + constructor);
-}
-
-@Logger
 class ts {
   constructor(id: number) {
     console.log(`id is a ${id}`);
@@ -46,7 +41,7 @@ export default class PDFBody implements Body {
 
     const x: ConstructorParameters<typeof ts> = [25];
 
-    console.log(test, test2, test3, test4, test5, arr, x);
+    console.log(test, test2, test3, test4, test5, arr, x, test6);
 
     return "PDF BODY";
   }

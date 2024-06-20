@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv";
 import application from "./app";
-import PDFBody from "./AbstractFactory/DocumentFactory/PDFDocument/PDFBody";
+import { func } from "./test";
 
 dotenv.config();
 
@@ -21,5 +21,4 @@ app.run(Number(process.env.APP_PORT));
 
 // leaf.operation();
 
-const pdfBody = new PDFBody();
-pdfBody.generate();
+func();
